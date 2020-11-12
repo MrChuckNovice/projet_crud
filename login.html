@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+    <meta name="description" content="">
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="floating-labels.css" rel="stylesheet">
+    <title>formulaire</title>
+  </head>
+
+  <body>
+    <!-- on lui donne acces a la page php-->
+    <form action="access.php" method="post">
+      <div class="form-signin">
+        <div class="text-center mb-4">
+           <h1 class="h3 mb-3 font-weight-normal">login</h1>
+        </div>
+      
+    <!-- access Email address-->
+        <div class="form-label-group">
+           <input type="email" class="form-control" name="courrier" placeholder="exemple@gmail.com" required autofocus>
+        </div>
+    <!-- access Password-->
+  <div class="form-label-group">
+    <input type="password" class="form-control" name="mdp" placeholder="*****" required>
+  </div>
+     <!-- case se souvenir de moi-->
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div> 
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</div>
+    </form>
+  </body>
+</html>
+<!-- formulaire pour rentrer dans l'acces privee
+     email: toto@gmail.com // mots de passe: toto 
+     email: papa@gmail.com // mots de passe: papa -->
+     
+     <!-- page lier a l'acceess de phpmyadmin -->
+  

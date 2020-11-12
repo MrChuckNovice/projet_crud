@@ -12,9 +12,9 @@ $emaildb = $resultat['courrier'];
 $mdpdb = $resultat['mdp'];
 
 if($emailform === $emaildb && $mdpform === $mdpdb){
-    header('location:access2.php');
+    header('location:index.php');
 }else{
-    header('location:index.html');
+    header('location:login.html');
 }
 
 ?> 
