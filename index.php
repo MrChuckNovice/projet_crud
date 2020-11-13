@@ -1,10 +1,22 @@
 <?php
-//tu met ta connection a ta base de données exemple(require_once('connection.php')//
-//t'ecris ta requete ($** = 'SELECT*FROM 'ta table')//
-// tu prépare ta requete ($query=$pdo->prepare($**);)//
-// t'execute ta requete ($query->execute())//
-// tu stock le résultat dans un tableau ($result=$query->fetchALL(PDO::FETCH_ASSOC);//
-// et la fermeture (require_once('close.php'))
+// On démarre une session
+session_start();
+
+// On inclut la connexion à la base
+require_once('connect.php');
+
+$sql = 'SELECT * FROM `ps5`';
+
+// On prépare la requête
+$query = $db->prepare($sql);
+
+// On exécute la requête
+$query->execute();
+
+// On stocke le résultat dans un tableau associatif
+$result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+require_once('close.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,8 +47,8 @@
                     }
                 ?>
                 <h1>Liste des produits</h1>
-                <table class="table">
-                    <thead>
+    <table class="table">
+     <thead>
         <th>id</th>
         <th>lieux d_achat</th>
         <th>Nom du produit</th>
@@ -56,16 +68,16 @@
         ?>
             <tr>
                 <td><?=$donnees['id']?></td>
-                <td><?=$donnees['lieux d_achat']?></td>
-                <td><?=$donnees['Nom du produit']?></td>
-                <td><?=$donnees['Référence du produit']?></td>
+                <td><?=$donnees['lieux_d_achat']?></td>
+                <td><?=$donnees['Nom_du_produit']?></td>
+                <td><?=$donnees['Référence_du_produit']?></td>
                 <td><?=$donnees['Catégorie']?></td>
-                <td><?=$donnees['Date d_achat']?></td>
-                <td><?=$donnees['Date de fin de garantie']?></td>
+                <td><?=$donnees['Date_d_achat']?></td>
+                <td><?=$donnees['Date_de_fin_de_garantie']?></td>
                 <td><?=$donnees['Prix']?></td>
-                <td><?=$donnees['conseils d_entretiens du produit']?></td>
-                <td><?=$donnees['Photo du tiket d_achat']?></td>
-                <td><?=$donnees['Manuel d_utilisation']?></td>
+                <td><?=$donnees['conseils_d_entretiens_du_produit']?></td>
+                <td><?=$donnees['Photo_du_tiket_d_achat']?></td>
+                <td><?=$donnees['Manuel_d_utilisation']?></td>
                 <td><a href="read.php?id=<?=$donnees['id'] ?>">Voir</a> <a href="update.php?id=<?=$donnees['id'] ?>">Modifier</a>  <a href="delete.php?id=<?= $donnees['id'] ?>">Supprimer</a></td>
             </tr>
         <?php
