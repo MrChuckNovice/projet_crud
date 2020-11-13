@@ -12,7 +12,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produit</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
 <table>
@@ -28,6 +27,7 @@
         <th>conseils d_entretiens du produit</th>
         <th>Photo du tiket d_achat</th>
         <th>Manuel d_utilisation</th>
+        <th>Action</th>
     </thead>
     <tbody>
         <?php
@@ -45,8 +45,7 @@
                 <td><?=$donnees['conseils d_entretiens du produit']?></td>
                 <td><?=$donnees['Photo du tiket d_achat']?></td>
                 <td><?=$donnees['Manuel d_utilisation']?></td>
-                <td><a href="read.php?id=<?=$donnees['id']?>">Voir</a> <a href="update.php?id=<?=$donnees['id']?>">Modifier</a>  <a href="delete.php?id=<?=$donnees['id']?>">Supprimer</a>  </td>
-
+                <td><a href="read.php?id=<?=$donnees['id'] ?>">Voir</a> <a href="update.php?id=<?=$donnees['id'] ?>">Modifier</a>  <a href="delete.php?id=<?= $donnees['id'] ?>">Supprimer</a></td>
             </tr>
         <?php
         }
