@@ -64,7 +64,7 @@ require_once('close.php');
     </thead>
     <tbody>
         <?php
-        foreach($reponse as $donnees){
+        foreach($result as $donnees){
         ?>
             <tr>
                 <td><?=$donnees['id']?></td>

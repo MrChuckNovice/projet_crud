@@ -147,7 +147,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
         <input type="text" name="Catégorie" id="Catégorie" value="<?= $reponse['Catégorie'] ?>">
     </p>
     <p>
-        <label for="Manuel_d_utilisation">Manuel d'utilisation</label>
+        <label for="Manuel_d_utilisation">Manuel dutilisation</label>
         <input type="text" name="Manuel_d_utilisation" id="Manuel_d_utilisation" value="<?= $reponse['Manuel_d_utilisation'] ?>">
     </p>
     <input type="hidden" name="id" value="<?= $reponse['id'] ?>">

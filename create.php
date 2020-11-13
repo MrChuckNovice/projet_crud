@@ -80,7 +80,7 @@ if($_POST){
                 ?>
                 <h1>Ajouter un produit</h1>
 <form method="post">
-    <label for="Nom du produit">produit</label>
+    <label for="Nom_du_produit">produit</label>
     <input type="text" name="Nom_du_produit" id="Nom_du_produit">
     <label for="lieux_d_achat">lieux d'achat</label>
     <input type="text" name="lieux_d_achat" id="lieux_d_achat">
@@ -98,6 +98,8 @@ if($_POST){
     <input type="text" name="conseils_d_entretiens_du_produit" id="conseils_d_entretiens_du_produit">
     <label for="Manuel_d_utilisation">Manuel d'utilisation</label>
     <input type="text" name="Manuel_d_utilisation" id="Manuel_d_utilisation">
+    <label for="Photo_du_tiket_d_achat">Photo du ticket d'achat</label>
+    <input type="file" class="form-control" name="photo">
     <button> enregistrer</button>
 </form>
 </body>

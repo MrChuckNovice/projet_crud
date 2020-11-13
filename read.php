@@ -45,11 +45,11 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
     <main class="container">
         <div class="row">
             <section class="col-12">
-    <h1>Détails du produit <?= $données['Nom_du_produit']?></h1>
-    <p>ID:<?=$donnees['id']?></p>
-    <p>Produit:<?=$donnees['Nom_du_produit']?></p>
-    <p>Prix:<?=$donnees['Prix']?></p>
-    <p>Categorie:<?=$donnees['Catégorie']?></p>
-    <p><a href="update.php?id=<?=$donnees['id']?>">Modifier</a>  <a href="delete.php?id=<?=$donnees['id']?>">Supprimer</a>  </td>
+    <h1>Détails du produit <?= $produit['Nom_du_produit']?></h1>
+    <p>ID:<?=$produit['id']?></p>
+    <p>Produit:<?=$produit['Nom_du_produit']?></p>
+    <p>Prix:<?=$produit['Prix']?></p>
+    <p>Categorie:<?=$produit['Catégorie']?></p>
+    <p><a href="update.php?id=<?=$produit['id']?>">Modifier</a>  <a href="delete.php?id=<?=$produit['id']?>">Supprimer</a>  </td>
 </body>
 </html>
