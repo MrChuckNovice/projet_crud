@@ -24,9 +24,29 @@ require_once('close.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="magasin.css">
     <title>Produit</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Magasin</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="create.php">Ajouter un produit <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <ul class="nav justify-content-end">
+      <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="logout" href="login.html">log out</button>
+    </form>
+</ul>
+  </div>
+</nav>
 <main class="container">
         <div class="row">
             <section class="col-12">
@@ -78,13 +98,12 @@ require_once('close.php');
                 <td><?=$donnees['conseils_d_entretiens_du_produit']?></td>
                 <td><?=$donnees['Photo_du_tiket_d_achat']?></td>
                 <td><?=$donnees['Manuel_d_utilisation']?></td>
-                <td><a href="read.php?id=<?=$donnees['id'] ?>">Voir</a> <a href="update.php?id=<?=$donnees['id'] ?>">Modifier</a>  <a href="delete.php?id=<?= $donnees['id'] ?>">Supprimer</a></td>
+                <td><button type="button" class="btn btn-info" href="read.php?id=<?=$donnees['id'] ?>">Info</button> <button type="button" class="btn btn-success"href="update.php?id=<?=$donnees['id'] ?>">Modifier</button>  <button type="button" class="btn btn-danger"href="delete.php?id=<?= $donnees['id'] ?>">Supprimer</button></td>
             </tr>
         <?php
         }
         ?>
     </tbody>
 </table>
-<a href="create.php">Ajouter</a>
 </body>
 </html>
